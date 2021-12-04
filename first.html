@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./mycontroller.js"></script>
+    <style>
+        tr, th, td {
+            border-radius: 1px;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="nameCtrl">
+        <table>
+            <tr>
+                <th>Provice State</th>
+                <th>countryRegion</th>
+                <th>lastUpdate</th>
+                <th>Lattitude</th>
+                <th>Longitude</th>
+                <th>Conformed</th>
+                <th>Recovered</th>
+                <th>Deaths</th>
+                <th>Cases in last 28 Days</th>
+                <th>Deaths in last 28 Days</th>
+            </tr>
+            <tr ng-repeat="item in items">
+                <td>{{item.provinceState}}</td>
+                <td>{{item.countryRegion}}</td>
+                <td>{{item.lastUpdate}}</td>
+                <td>{{item.lat}}</td>
+                <td>{{item.long}}</td>
+                <td>{{item.confirmed}}</td>
+                <td>{{item.recovered}}</td>
+                <td>{{item.deaths}}</td>
+                <td>{{item.cases28Days}}</td>
+                <td>{{item.deaths28Days}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
